@@ -92,7 +92,7 @@ function removeFromCart(item) {
    return cart
  } else {
    console.log(`That item is not in your cart.`)
-   return getCart()
+   return 
  }
 
 }
