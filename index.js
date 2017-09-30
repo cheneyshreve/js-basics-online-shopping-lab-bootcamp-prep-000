@@ -77,20 +77,21 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var flag = [];
+  var flag = -1;
   for (var i = 0; i < cart.length; i++){
    var prop = cart[i].hasOwnProperty(item)
     if (prop == true) {
+      flag = i;
       flag.push(i)
     };
   };
-   var index = parseInt(flag);
-   if (isNaN(index) == false ) {
+
+   if (flag >= 0) {
    var newCart = Object.assign({}, cart)
-   delete newCart[index]
+   delete newCart[flag]
    cart = newCart
    return cart
- } else if (isNaN(index) == true) {
+ } else {
    console.log(`That item is not in your cart.`)
    return cart
  }
