@@ -87,9 +87,8 @@ function removeFromCart(item) {
   };
 
    if (flag >= 0) {
-   var newCart = Object.assign({}, cart)
-   delete newCart[flag]
-   cart = newCart
+   
+    cart = cart.slice(0,flag).concat(flag+1)
    return cart
  } else {
    console.log(`That item is not in your cart.`)
