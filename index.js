@@ -82,7 +82,6 @@ function removeFromCart(item) {
    var prop = cart[i].hasOwnProperty(item)
     if (prop == true) {
       flag = i;
-      flag.push(i)
     };
   };
 
