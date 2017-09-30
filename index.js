@@ -86,7 +86,7 @@ function removeFromCart(item) {
     delete newObj[good]
     element = newObj
     console.log(`removing item`)
-    return cart
+    return cart.push(element)
   } else if (prop === false){
      console.log(`That item is not in your cart.`)
    }
