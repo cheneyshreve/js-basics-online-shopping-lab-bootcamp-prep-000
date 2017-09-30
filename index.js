@@ -23,6 +23,7 @@ function addToCart(item) {
     var getKale = getCart();
     return getKale
   }
+  return cart
 }
 
 function viewCart() {
