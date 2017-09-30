@@ -89,7 +89,7 @@ function removeFromCart(item) {
 
   if (flag === null ){
     console.log(`That item is not in your cart.`)
-  } else if (flag != null) {  
+  } else if (flag != null) {
    delete cart[flag]
    console.log(`removing item`)
    return cart
