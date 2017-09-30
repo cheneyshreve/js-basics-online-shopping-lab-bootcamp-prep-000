@@ -87,11 +87,13 @@ function removeFromCart(item) {
       return flag
     };
   };
-
+  
   if (flag === null ){
     console.log(`That item is not in your cart.`)
   } else if (flag != null) {
-   delete cart[flag]
+   var newCart = Object.assign({}, cart)
+   delete newCart[flag]
+   cart = newCart
    console.log(`removing item`)
    return cart
  }
