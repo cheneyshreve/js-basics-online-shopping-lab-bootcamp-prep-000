@@ -84,9 +84,10 @@ function removeFromCart(item) {
       flag.push(i)
     };
   };
-   if (parseInt(flag) >= 0 ) {
+   var index = parseInt(flag);
+   
+   if (isNaN(index) == false ) {
    var newCart = Object.assign({}, cart)
-   var index = parseInt(flag)
    delete newCart[index]
    cart = newCart
    return cart
