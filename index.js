@@ -86,7 +86,7 @@ function removeFromCart(item) {
   };
    if (parseInt(flag) >= 0 ) {
    var newCart = Object.assign({}, cart)
-   delete newCart[parseInt(flag)]
+   delete newCart[flag]
    cart = newCart
    return cart
  } else {
