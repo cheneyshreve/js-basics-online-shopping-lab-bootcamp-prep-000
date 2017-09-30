@@ -85,13 +85,12 @@ function removeFromCart(item) {
     };
   };
    var index = parseInt(flag);
-   
    if (isNaN(index) == false ) {
    var newCart = Object.assign({}, cart)
    delete newCart[index]
    cart = newCart
    return cart
- } else {
+ } else if (isNaN(index) == true) {
    console.log(`That item is not in your cart.`)
    return cart
  }
