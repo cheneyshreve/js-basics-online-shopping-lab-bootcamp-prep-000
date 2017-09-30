@@ -81,16 +81,15 @@ function removeFromCart(item) {
   for (var i = 0; i < cart.length; i++){
    var prop = cart[i].hasOwnProperty(item)
    console.log(`prop is ${prop}`)
-
     if (prop == true) {
       flag.push(i)
       console.log(`flag is: ${flag}`)
     };
   };
 
-  if (flag == null ){
+  if (flag[index]=="" ){
     console.log(`That item is not in your cart.`)
-  } else if (flag != null) {
+  } else if (flag >= 0) {
    var newCart = Object.assign({}, cart)
    delete newCart[flag]
    cart = newCart
