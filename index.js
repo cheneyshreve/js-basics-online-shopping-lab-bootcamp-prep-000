@@ -82,11 +82,11 @@ function removeFromCart(item) {
   var prop = element.hasOwnProperty(good)
   console.log(`property: ${prop}`)
   if (prop === true){
-   var newObj = Object.assign({},element)
+   var newObj = Object.assign({},cart)
     delete newObj[good]
-    element = newObj
+    cart.element = newObj
     console.log(`removing item`)
-    return cart.push(element)
+    return cart
   } else if (prop === false){
      console.log(`That item is not in your cart.`)
    }
