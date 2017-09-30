@@ -77,23 +77,23 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var flag = -1;
+  var flag = [];
   for (var i = 0; i < cart.length; i++){
    var prop = cart[i].hasOwnProperty(item)
     if (prop === true) {
-      flag = i;
+      flag.push(i)
       return flag
     };
   };
 
-  if (flag < 0 ){
+  if (flag == null ){
     console.log(`That item is not in your cart.`)
-  } else if (flag > -1) {
-   var obj = cart[flag]
+  } else if (flag != null) {
+   var obj = Object.assign ({}, cart[flag])
    delete obj[item]
-    
-  }
-  
+   cart[flag] = obj
+   return cart
+ }
 }
 
 function placeOrder(cardNumber) {
