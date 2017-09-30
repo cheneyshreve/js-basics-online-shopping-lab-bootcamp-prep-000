@@ -81,14 +81,14 @@ function removeFromCart(item) {
   for (var i = 0; i < cart.length; i++){
    var prop = cart[i].hasOwnProperty(item)
    console.log(`prop is ${prop}`)
-   
+
     if (prop == true) {
       flag.push(i)
       console.log(`flag is: ${flag}`)
       return flag
     };
   };
-  
+
   if (flag == null ){
     console.log(`That item is not in your cart.`)
   } else if (flag != null) {
