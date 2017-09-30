@@ -87,7 +87,7 @@ function removeFromCart(item) {
     };
   };
 
-  if (flag[index]=="" ){
+  if (index < flag.length ){
     console.log(`That item is not in your cart.`)
   } else if (flag >= 0) {
    var newCart = Object.assign({}, cart)
