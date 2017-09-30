@@ -87,7 +87,7 @@ function removeFromCart(item) {
   };
 
    if (flag >= 0) {
-   
+
     cart = cart.slice(0,flag).concat(flag+1)
    return cart
  } else {
