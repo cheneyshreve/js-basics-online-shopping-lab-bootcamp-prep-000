@@ -86,15 +86,14 @@ function removeFromCart(item) {
       console.log(`flag is: ${flag}`)
     };
   };
-
-  if (index < flag.length ){
-    console.log(`That item is not in your cart.`)
-  } else if (flag >= 0) {
+   if (parseInt(flag) >= 0) {
    var newCart = Object.assign({}, cart)
    delete newCart[flag]
    cart = newCart
    console.log(`removing item`)
    return cart
+ } else {
+   console.log(`That item is not in your cart.`)
  }
 }
 
