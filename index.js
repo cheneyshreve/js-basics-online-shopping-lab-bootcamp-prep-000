@@ -85,7 +85,6 @@ function removeFromCart(item) {
     if (prop == true) {
       flag.push(i)
       console.log(`flag is: ${flag}`)
-      return flag
     };
   };
 
