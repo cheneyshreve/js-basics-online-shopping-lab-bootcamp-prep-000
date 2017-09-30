@@ -77,20 +77,23 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var good = item;
-  cart.forEach(function(element){
-  var prop = element.hasOwnProperty(good)
-  console.log(`property: ${prop}`)
-  if (prop === true){
-   var newObj = Object.assign({},cart)
-    delete newObj[good]
-    cart.element = newObj
-    console.log(`removing item`)
-    return cart
-  } else if (prop === false){
-     console.log(`That item is not in your cart.`)
-   }
- });
+  var flag = -1;
+  for (var i = 0; i < cart.length; i++){
+   var prop = cart[i].hasOwnProperty(item)
+    if (prop === true) {
+      flag = i;
+      return flag
+    };
+  };
+
+  if (flag < 0 ){
+    console.log(`That item is not in your cart.`)
+  } else if (flag > -1) {
+   var obj = cart[flag]
+   delete obj[item]
+    
+  }
+  
 }
 
 function placeOrder(cardNumber) {
